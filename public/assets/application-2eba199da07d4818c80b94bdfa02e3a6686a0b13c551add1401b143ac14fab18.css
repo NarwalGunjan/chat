@@ -1,0 +1,192 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+/* line 17, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+html, body {
+  background: #f3f3f3 !important;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 18, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+a {
+  color: #333 !important;
+}
+
+/* line 19, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.card {
+  box-shadow: 2px 2px 3px #ccc;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* line 20, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.login-box {
+  margin-top: 100px;
+}
+
+/* line 21, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.forgot_link, .signup_link {
+  display: inline-block !important;
+}
+
+/* line 22, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.forgot_link, .loginlink {
+  float: right;
+}
+
+/* line 23, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.bottom-links {
+  margin-top: 15px;
+}
+
+/* line 24, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.white-text {
+  color: #fff !important;
+}
+
+/* line 25, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.card1, .card2 {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px #aaa;
+  min-height: 450px;
+}
+
+/* line 26, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.card1 {
+  background: url("training-e7d1af721298879bb0e7bf5f00607c4e4b44f36d50576c176cfebaae8a363981.jpg");
+  background-size: cover;
+}
+
+/* line 27, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.blue-bg {
+  background: rgba(100, 94, 188, 0.95);
+  color: #fff;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* line 28, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.vio_bot {
+  padding: 40px 30px;
+  background: rgba(100, 94, 188, 0.8);
+  color: #fff;
+}
+
+/* line 29, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.vio_bot img {
+  text-align: center;
+}
+
+/* line 30, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.white_bot {
+  background: white;
+  padding: 80px 0px;
+}
+
+/* line 31, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.grey {
+  background: #ddd;
+  padding: 10px;
+  color: #645ebc;
+  font-weight: bold;
+}
+
+/* line 32, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.replyouter {
+  position: relative;
+  bottom: 0;
+}
+
+/* line 33, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+#replybox {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
+
+/* line 34, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+textarea {
+  resize: none;
+}
+
+/* line 35, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.pad0 {
+  padding: 0px !important;
+}
+
+/* line 36, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.conversationbox {
+  min-height: 400px;
+}
+
+/* line 37, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.replybox {
+  height: 45px !important;
+  width: 100%;
+}
+
+/* line 40, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.bubble {
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #B2B2B2;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  vertical-align: top;
+  clear: both;
+}
+
+/* line 51, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.bubble::before {
+  background-color: #F2F2F2;
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  position: absolute;
+  top: 11px;
+  transform: rotate(29deg) skew(-35deg);
+  -moz-transform: rotate(29deg) skew(-35deg);
+  -ms-transform: rotate(29deg) skew(-35deg);
+  -o-transform: rotate(29deg) skew(-35deg);
+  -webkit-transform: rotate(29deg) skew(-35deg);
+  width: 20px;
+}
+
+/* line 66, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.rightbubble {
+  float: left;
+  margin: 5px 45px 5px 20px;
+}
+
+/* line 71, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.rightbubble::before {
+  box-shadow: -2px 2px 2px 0 rgba(178, 178, 178, 0.4);
+  left: -9px;
+}
+
+/* line 76, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.leftbubble {
+  float: right;
+  margin: 5px 20px 5px 45px;
+}
+
+/* line 81, /home/gunjan/Downloads/chat/app/assets/stylesheets/application.scss */
+.leftbubble::before {
+  box-shadow: 2px -2px 2px 0 rgba(178, 178, 178, 0.4);
+  right: -9px;
+}
