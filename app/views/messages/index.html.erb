@@ -1,0 +1,53 @@
+<div class="card2 mobile-box">
+  <% time = Time.new %>
+  <div class="blue-bg text-center">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-4 text-left">
+          <%= link_to "Back", session[:my_previous_url] %>      
+        </div>
+        <div class="col-xs-4 text-center"><%= time.hour.to_s + ":" + time.min.to_s  %></div>
+        <div class="col-xs-4  text-right">
+          <a  class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
+            <i class="fa fa-ellipsis-v white-text"></i>
+          </a>
+          <div class="dropdown-menu">
+            <%= link_to "Signout", destroy_user_session_path, :method => :delete %> 
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grey text-center">
+    <%= @chatter %>
+  </div>
+  <div class="container-fluid">
+    <div>
+      <div class="conversationbox">
+        <% @messages.each do |message| %>
+          <% if message.body.present?%>
+            <% if message.user == current_user %>
+              <div class="pull-right bubble leftbubble">
+            <% else %>
+              <div class="pull-left bubble rightbubble">
+            <% end %>
+            <%= message.body%></div>
+            <br>  
+          <%end%>  
+        <% end %>
+      </div>
+  </div>
+
+  <%= form_for [@conversation, @message] do |f| %>
+    <div class="row ">
+      <div class="col-xs-10 pad0">
+        <%= f.text_area :body, class:"form-control replybox", placeholder:"Message Here" %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+      </div>
+      <div class="col-xs-2 pad0">
+        <%= f.submit ">", class:"btn btn-success replybox" %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+  </div>

@@ -1,0 +1,33 @@
+<div class="card2 mobile-box">
+  <% time = Time.new %>
+  <div class="blue-bg text-center">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-4 text-left">
+          <%= link_to "Back", session[:my_previous_url] %>      
+        </div>
+        <div class="col-xs-4 text-center"><%= time.hour.to_s + ":" + time.min.to_s  %></div>
+        <div class="col-xs-4  text-right">
+          <a  class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
+            <i class="fa fa-ellipsis-v white-text"></i>
+          </a>
+          <div class="dropdown-menu">
+            <%= link_to "Signout", destroy_user_session_path, :method => :delete %> 
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grey text-center">
+  Chat List
+  </div>
+  <div class="container-fluid">
+    <p class="text-center"> Please pick a recipient from the list </p>
+    <%=form_for @conversation do |f| %>
+    	<%= f.hidden_field :sender_id, :value => current_user.id%>
+    	<%= f.label :recipient_id%>
+    	<%= f.collection_select :recipient_id, User.order(:email).reject{|user| user.id==current_user.id}, :id, :email%>
+    	<%= f.submit "Start Chat" %>
+    <%end%>
+  </div>
+</div>

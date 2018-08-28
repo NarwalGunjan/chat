@@ -1,0 +1,45 @@
+<div class="card1 mobile-box">
+<% time = Time.new %>
+<div class="blue-bg text-center">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-4 text-left">
+ 
+       <% if current_user.role == true %>
+	Welcome Trainer
+<% else %>
+	Welcome User! 
+<% end %>      
+
+
+     </div>
+    <div class="col-xs-4 text-center"><%= time.hour.to_s + ":" + time.min.to_s  %></div>
+    <div class="col-xs-4  text-right">
+    
+ 
+      <a  class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
+    <i class="fa fa-ellipsis-v white-text"></i>
+  </a>
+  <div class="dropdown-menu">
+    <%= link_to "Signout", destroy_user_session_path, :method => :delete %> 
+  </div>
+
+
+
+ 
+         </div>
+  </div>
+</div>
+
+</div>
+
+<div class="vio_bot text-center">
+
+
+
+        <%= link_to image_tag("User_Circle.png", :height => 100, :width => 100, :title => "Start New COnversation"), new_conversation_path%>
+	<br /><br /><%= current_user.email%><br /><br />
+       <p>We are happy to have you as our user. You better<br /> understand the importance of training.</p> <br />
+<%= link_to '<button class="btn btn-success btn-circle">Open Chat</button>'.html_safe, conversations_path %><br />
+</div>
+</div>
